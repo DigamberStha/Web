@@ -1,0 +1,30 @@
+/*
+Author: Digamber Singh Shrestha
+Date: 2025-09-26
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  text-align: center;
+  background-color: #c0d9e3;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+img,
+audio,
+video {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
