@@ -8,23 +8,28 @@ body {
   line-height: 1.6;
   margin: 20px;
   text-align: center;
-  background-color: #c0d9e3;
-  color: #333;
+  background-color: #0d8dcd;
+  color: #fff; /* better contrast on blue */
 }
 
 h1 {
   margin-bottom: 20px;
+  color: #ffeb3b; /* bright title color */
 }
 
 section {
-  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
 }
 
 img,
 audio,
 video {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   max-width: 500px;
   width: 100%;
+  border-radius: 8px;
 }
