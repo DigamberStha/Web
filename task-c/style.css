@@ -24,12 +24,27 @@ section {
   margin-bottom: 25px;
 }
 
-img,
-audio,
+img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+audio {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 500px;
+}
+
 video {
   display: block;
-  margin: 10px auto;
-  max-width: 500px;
+  margin: 20px auto;
   width: 100%;
-  border-radius: 8px;
+  max-width: 700px;
+}
+
+section {
+  margin-bottom: 2rem;
 }
