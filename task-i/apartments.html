@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apartments — PrimeStay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+        <h1 class="text-2xl font-bold text-blue-700">PrimeStay</h1>
+        <nav class="space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="apartments.html" class="hover:text-blue-600">Apartments</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-28 max-w-7xl mx-auto px-5">
+      <h2 class="text-3xl font-bold text-blue-700 mb-6">
+        Available Apartments
+      </h2>
+
+      <!-- Filters -->
+      <div class="bg-white shadow p-6 rounded mb-8 grid md:grid-cols-3 gap-6">
+        <div>
+          <label class="block font-semibold mb-1">Max Price</label>
+          <select id="filterPrice" class="w-full border rounded p-2">
+            <option value="all">Any</option>
+            <option value="1000">Under $1000</option>
+            <option value="1500">Under $1500</option>
+            <option value="2000">Under $2000</option>
+            <option value="2500">Under $2500</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Location</label>
+          <select id="filterLocation" class="w-full border rounded p-2">
+            <option value="all">Any</option>
+            <option value="city">City Center</option>
+            <option value="finance">Financial District</option>
+            <option value="river">River Park</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Size</label>
+          <select id="filterSize" class="w-full border rounded p-2">
+            <option value="all">Any</option>
+            <option value="studio">Studio</option>
+            <option value="1bed">1 Bedroom</option>
+            <option value="2bed">2 Bedroom+</option>
+            <option value="3bed">3 Bedroom+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Apartment Grid -->
+      <div id="aptList" class="grid md:grid-cols-3 gap-6">
+        <!-- Apartment Cards -->
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt1"
+          data-price="950"
+          data-location="city"
+          data-size="studio"
+        >
+          <img
+            src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+            class="w-full h-56 object-cover"
+            alt="Modern Studio Apartment"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">Modern Studio Apartment</h4>
+            <p class="text-sm text-gray-600">City Center · $950/month</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt2"
+          data-price="1500"
+          data-location="finance"
+          data-size="1bed"
+        >
+          <img
+            src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg"
+            class="w-full h-56 object-cover"
+            alt="Luxury Loft"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">Luxury Loft with Balcony</h4>
+            <p class="text-sm text-gray-600">
+              Financial District · $1500/month
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt3"
+          data-price="1800"
+          data-location="river"
+          data-size="2bed"
+        >
+          <img
+            src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"
+            class="w-full h-56 object-cover"
+            alt="2-Bedroom Family Suite"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">2-Bedroom Family Suite</h4>
+            <p class="text-sm text-gray-600">River Park · $1800/month</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt4"
+          data-price="1300"
+          data-location="city"
+          data-size="1bed"
+        >
+          <img
+            src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg"
+            class="w-full h-56 object-cover"
+            alt="Elegant 1-Bedroom Suite"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">Elegant 1-Bedroom Suite</h4>
+            <p class="text-sm text-gray-600">City Center · $1300/month</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt5"
+          data-price="2000"
+          data-location="finance"
+          data-size="2bed"
+        >
+          <img
+            src="https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg"
+            class="w-full h-56 object-cover"
+            alt="Executive 2-Bedroom Apartment"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">
+              Executive 2-Bedroom Apartment
+            </h4>
+            <p class="text-sm text-gray-600">
+              Financial District · $2000/month
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt6"
+          data-price="2200"
+          data-location="river"
+          data-size="3bed"
+        >
+          <img
+            src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
+            class="w-full h-56 object-cover"
+            alt="Spacious 3-Bedroom Penthouse"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">Spacious 3-Bedroom Penthouse</h4>
+            <p class="text-sm text-gray-600">River Park · $2200/month</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt7"
+          data-price="1600"
+          data-location="city"
+          data-size="1bed"
+        >
+          <img
+            src="https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg"
+            class="w-full h-56 object-cover"
+            alt="Apartment 1-Bedroom Loft"
+          />
+
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">Modern 1-Bedroom Loft</h4>
+            <p class="text-sm text-gray-600">City Center · $1600/month</p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt8"
+          data-price="1200"
+          data-location="finance"
+          data-size="studio"
+        >
+          <img
+            src="https://images.pexels.com/photos/1571450/pexels-photo-1571450.jpeg"
+            class="w-full h-56 object-cover"
+            alt="Cozy Studio Apartment"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">Cozy Studio Apartment</h4>
+            <p class="text-sm text-gray-600">
+              Financial District · $1200/month
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="#"
+          class="aptCard rounded bg-white shadow block overflow-hidden"
+          data-id="apt9"
+          data-price="1800"
+          data-location="river"
+          data-size="2bed"
+        >
+          <img
+            src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg"
+            class="w-full h-56 object-cover"
+            alt="River View 2-Bedroom Apartment"
+          />
+          <div class="p-5">
+            <h4 class="font-bold text-lg mb-2">
+              River View 2-Bedroom Apartment
+            </h4>
+            <p class="text-sm text-gray-600">River Park · $1800/month</p>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- Apartment Modals -->
+    <div id="aptDetailsContainer">
+      <!-- Loop through all apartments for modals -->
+      <script>
+        const apartments = [
+          {
+            id: "apt1",
+            name: "Modern Studio Apartment",
+            img: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+            desc: "Fully furnished modern studio located in City Center with high-speed Wi-Fi and kitchenette.",
+            price: "$950/month",
+            size: "Studio",
+          },
+          {
+            id: "apt2",
+            name: "Luxury Loft with Balcony",
+            img: "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg",
+            desc: "Spacious 1-bedroom loft in Financial District with balcony and access to gym and co-working spaces.",
+            price: "$1500/month",
+            size: "1 Bedroom",
+          },
+          {
+            id: "apt3",
+            name: "2-Bedroom Family Suite",
+            img: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+            desc: "Ideal for small families, this 2-bedroom suite in River Park features spacious rooms, full kitchen, and proximity to parks and schools.",
+            price: "$1800/month",
+            size: "2 Bedrooms",
+          },
+          {
+            id: "apt4",
+            name: "Elegant 1-Bedroom Suite",
+            img: "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg",
+            desc: "Comfortable 1-bedroom apartment in City Center with modern furniture, smart lighting, and balcony with scenic city views.",
+            price: "$1300/month",
+            size: "1 Bedroom",
+          },
+          {
+            id: "apt5",
+            name: "Executive 2-Bedroom Apartment",
+            img: "https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg",
+            desc: "Modern 2-bedroom apartment in Financial District, fully furnished, perfect for professionals seeking luxury and convenience.",
+            price: "$2000/month",
+            size: "2 Bedrooms",
+          },
+          {
+            id: "apt6",
+            name: "Spacious 3-Bedroom Penthouse",
+            img: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg",
+            desc: "Luxurious 3-bedroom penthouse in River Park with panoramic river views, modern kitchen, and private terrace.",
+            price: "$2200/month",
+            size: "3 Bedrooms",
+          },
+          {
+            id: "apt7",
+            name: "Modern 1-Bedroom Loft",
+            img: "https://images.pexels.com/photos/1396133/pexels-photo-1396133.jpeg",
+            desc: "Stylish 1-bedroom loft in City Center featuring open-plan living, modern amenities, and easy access to shops and cafes.",
+            price: "$1600/month",
+            size: "1 Bedroom",
+          },
+          {
+            id: "apt8",
+            name: "Cozy Studio Apartment",
+            img: "https://images.pexels.com/photos/1571450/pexels-photo-1571450.jpeg",
+            desc: "Charming studio apartment in Financial District, fully furnished, ideal for singles or young professionals.",
+            price: "$1200/month",
+            size: "Studio",
+          },
+          {
+            id: "apt9",
+            name: "River View 2-Bedroom Apartment",
+            img: "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg",
+            desc: "Bright 2-bedroom apartment with scenic river views, spacious living area, and modern kitchen facilities.",
+            price: "$1800/month",
+            size: "2 Bedrooms",
+          },
+        ];
+
+        const container = document.getElementById("aptDetailsContainer");
+        apartments.forEach((apt, i) => {
+          const div = document.createElement("div");
+          div.id = apt.id;
+          div.className =
+            "aptDetail hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50 opacity-0 transition-opacity duration-300";
+          div.innerHTML = `
+          <div class="bg-white max-w-3xl w-full rounded shadow-lg p-8 relative">
+            <button onclick="closeDetail('${apt.id}')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">✕</button>
+            <h2 class="text-2xl font-bold mb-4">${apt.name}</h2>
+            <img src="${apt.img}" class="w-full h-64 object-cover rounded mb-4"/>
+            <p>${apt.desc}</p>
+            <p class="mt-3"><strong>Price:</strong> ${apt.price}</p>
+            <p><strong>Size:</strong> ${apt.size}</p>
+            <div class="flex justify-between mt-6">
+              <button onclick="prevModal('${apt.id}')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Prev</button>
+              <button onclick="nextModal('${apt.id}')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Next</button>
+            </div>
+          </div>
+        `;
+          container.appendChild(div);
+        });
+      </script>
+    </div>
+
+    <script>
+      const priceFilter = document.getElementById("filterPrice");
+      const locationFilter = document.getElementById("filterLocation");
+      const sizeFilter = document.getElementById("filterSize");
+      const cards = document.querySelectorAll(".aptCard");
+      const modalOrder = [
+        "apt1",
+        "apt2",
+        "apt3",
+        "apt4",
+        "apt5",
+        "apt6",
+        "apt7",
+        "apt8",
+        "apt9",
+      ];
+
+      function applyFilters() {
+        cards.forEach((card) => {
+          let price = parseInt(card.dataset.price);
+          let location = card.dataset.location;
+          let size = card.dataset.size;
+          let pricePass =
+            priceFilter.value === "all" || price <= parseInt(priceFilter.value);
+          let locationPass =
+            locationFilter.value === "all" || locationFilter.value === location;
+          let sizePass =
+            sizeFilter.value === "all" || sizeFilter.value === size;
+          if (pricePass && locationPass && sizePass)
+            card.classList.remove("hidden");
+          else card.classList.add("hidden");
+        });
+      }
+
+      [priceFilter, locationFilter, sizeFilter].forEach((f) =>
+        f.addEventListener("change", applyFilters)
+      );
+
+      // Open modal
+      cards.forEach((card) => {
+        card.addEventListener("click", (e) => {
+          e.preventDefault();
+          const modal = document.getElementById(card.dataset.id);
+          modal.classList.remove("hidden");
+          setTimeout(() => modal.classList.add("opacity-100"), 10);
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      function closeDetail(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove("opacity-100");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }, 300);
+      }
+
+      // Close on click outside
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("aptDetail")) closeDetail(e.target.id);
+      });
+
+      function nextModal(currentId) {
+        let index = modalOrder.indexOf(currentId);
+        closeDetail(currentId);
+        let nextId = modalOrder[(index + 1) % modalOrder.length];
+        const nextModalEl = document.getElementById(nextId);
+        nextModalEl.classList.remove("hidden");
+        setTimeout(() => nextModalEl.classList.add("opacity-100"), 10);
+        document.body.style.overflow = "hidden";
+      }
+
+      function prevModal(currentId) {
+        let index = modalOrder.indexOf(currentId);
+        closeDetail(currentId);
+        let prevId =
+          modalOrder[(index - 1 + modalOrder.length) % modalOrder.length];
+        const prevModalEl = document.getElementById(prevId);
+        prevModalEl.classList.remove("hidden");
+        setTimeout(() => prevModalEl.classList.add("opacity-100"), 10);
+        document.body.style.overflow = "hidden";
+      }
+    </script>
+  </body>
+</html>

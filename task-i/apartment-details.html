@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment Details — PrimeStay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+        <h1 class="text-2xl font-bold text-blue-700">PrimeStay</h1>
+        <nav class="space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="apartments.html" class="hover:text-blue-600">Apartments</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-28 max-w-7xl mx-auto px-5 pb-20">
+      <!-- Title -->
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">
+        Modern Studio Apartment
+      </h2>
+
+      <!-- Image -->
+      <img
+        src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+        class="rounded shadow mb-8 w-full h-[450px] object-cover"
+        alt=""
+      />
+
+      <!-- Details -->
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-xl font-bold mb-3">Description</h3>
+          <p class="leading-relaxed">
+            This fully furnished modern studio is located in the heart of the
+            city and provides everything you need for comfortable long-term
+            living. Just a short walk from public transport, cafés, and shopping
+            districts.
+          </p>
+
+          <ul class="mt-5 space-y-2 text-gray-700">
+            <li>✔ High-speed Wi-Fi</li>
+            <li>✔ Modern kitchenette</li>
+            <li>✔ City skyline view</li>
+            <li>✔ 24/7 support</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4 bg-white shadow p-6 rounded">
+          <h3 class="text-xl font-bold">Rental Information</h3>
+          <p><strong>Location:</strong> City Center</p>
+          <p><strong>Price:</strong> $950/month</p>
+          <p><strong>Size:</strong> Studio · 35 sqm</p>
+
+          <a
+            href="apartments.html"
+            class="inline-block bg-blue-600 text-white px-5 py-3 rounded hover:bg-blue-700"
+          >
+            Back to Listings
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
