@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeStay — Rental Order</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- HEADER -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+        <h1 class="text-2xl font-bold text-blue-700">PrimeStay</h1>
+
+        <nav class="space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-blue-600"></a>
+          <a href="apartments.html" class="hover:text-blue-600"></a>
+
+          <!-- Task-I Link -->
+          <a
+            href="https://digamberstha.github.io/Web/task-i/"
+            target="_blank"
+            class="text-blue-700 underline hover:text-blue-500"
+          >
+            Our website
+          </a>
+
+          <a href="order.html" class="text-blue-700">Rent Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL MULTI-IMAGE HERO -->
+    <section class="pt-32 relative">
+      <!-- background slideshow grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 h-[50vh] overflow-hidden">
+        <div class="relative">
+          <img
+            src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg"
+            class="w-full h-full object-cover brightness-75"
+          />
+        </div>
+
+        <div class="relative hidden md:block">
+          <img
+            src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+            class="w-full h-full object-cover brightness-75"
+          />
+        </div>
+
+        <div class="relative hidden md:block">
+          <img
+            src="https://images.pexels.com/photos/358636/pexels-photo-358636.jpeg"
+            class="w-full h-full object-cover brightness-75"
+          />
+        </div>
+      </div>
+
+      <!-- subtle overlay for text readability -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent via-white/70 to-white"
+      ></div>
+
+      <!-- hero text -->
+      <div class="relative max-w-5xl mx-auto px-5 py-12" data-aos="fade-up">
+        <h2 class="text-5xl font-extrabold text-blue-700 drop-shadow mb-4">
+          Request a Apartment Rental
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl">
+          Submit your rental request and our team will contact you shortly with
+          the best options tailored to your stay.
+        </p>
+
+        <a
+          href="https://digamberstha.github.io/Web/task-i/"
+          target="_blank"
+          class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded shadow"
+        >
+          Visit Our Website
+        </a>
+      </div>
+    </section>
+
+    <!-- MAIN FORM SECTION -->
+    <main
+      class="max-w-4xl mx-auto px-5 pb-24"
+      data-aos="fade-up"
+      data-aos-delay="150"
+    >
+      <form
+        class="bg-white shadow-xl rounded-xl p-10 space-y-6 border border-gray-200"
+      >
+        <!-- CUSTOMER INFORMATION -->
+        <fieldset class="space-y-4" data-aos="fade-right">
+          <legend class="text-2xl font-bold text-blue-700 mb-2">
+            Your Information
+          </legend>
+
+          <div>
+            <label for="fullname" class="block font-semibold mb-1"
+              >Full Name</label
+            >
+            <input
+              id="fullname"
+              type="text"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block font-semibold mb-1"
+              >Email Address</label
+            >
+            <input
+              id="email"
+              type="email"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3"
+            />
+          </div>
+
+          <div>
+            <label for="phone" class="block font-semibold mb-1"
+              >Phone Number</label
+            >
+            <input
+              id="phone"
+              type="tel"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3"
+            />
+          </div>
+        </fieldset>
+
+        <hr class="border-gray-300" />
+
+        <!-- RENTAL DETAILS -->
+        <fieldset class="space-y-4" data-aos="fade-left">
+          <legend class="text-2xl font-bold text-blue-700 mb-2">
+            Rental Details
+          </legend>
+
+          <div>
+            <label class="block font-semibold mb-1">Select Apartment</label>
+            <select
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3"
+            >
+              <option value="">Choose an apartment…</option>
+              <option>Modern Studio — City Center — $950/month</option>
+              <option>Luxury Loft — Skyline View — $1500/month</option>
+              <option>2-Bedroom Family Suite — Parkside — $1800/month</option>
+            </select>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block font-semibold mb-1">Move-in Date</label>
+              <input
+                type="date"
+                required
+                class="w-full border border-gray-300 rounded-lg px-4 py-3"
+              />
+            </div>
+
+            <div>
+              <label class="block font-semibold mb-1">Move-out Date</label>
+              <input
+                type="date"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-semibold mb-1">Additional Notes</label>
+            <textarea
+              rows="4"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3"
+              placeholder="Any special requests?"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <hr class="border-gray-300" />
+
+        <!-- CONSENT -->
+        <div class="flex items-start space-x-3" data-aos="fade-up">
+          <input id="terms" type="checkbox" required class="mt-1" />
+          <label for="terms" class="text-sm text-gray-600">
+            I agree to the rental terms and privacy policy.
+          </label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow-lg"
+          data-aos="zoom-in"
+        >
+          Submit Rental Request
+        </button>
+      </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white text-center py-10 mt-10">
+      <p>© 2025 PrimeStay Apartments</p>
+      <p class="mt-2">Contact: info@primestay.com</p>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1200, once: true });
+    </script>
+  </body>
+</html>

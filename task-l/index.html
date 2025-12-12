@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeStay Apartments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+        <h1 class="text-2xl font-bold text-blue-700">PrimeStay</h1>
+        <nav class="space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="catalog.html" class="hover:text-blue-600">Apartments</a>
+          <a href="application.html" class="hover:text-blue-600">Apply</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative h-[100vh] overflow-hidden">
+      <img
+        src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
+        alt="Modern apartment building with balconies"
+        class="absolute inset-0 w-full h-full object-cover object-top"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+        <div class="max-w-7xl mx-auto text-white px-5 pt-40">
+          <h2 class="text-5xl font-bold mb-4">Find Your Perfect Home</h2>
+          <p class="text-lg mb-6 max-w-lg">
+            Premium apartments in prime locations with modern amenities and
+            long-term value.
+          </p>
+          <a
+            href="catalog.html"
+            class="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 font-semibold rounded shadow"
+          >
+            View Available Apartments
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section class="max-w-7xl mx-auto py-14 px-5">
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">Why PrimeStay?</h2>
+      <p class="text-lg max-w-3xl mb-4">
+        At PrimeStay, we specialize in offering professionally designed, fully
+        furnished apartments in the heart of the city. Whether you're staying
+        for a month or a year, you’ll enjoy flexible contracts, 24/7 customer
+        service, and a modern living experience.
+      </p>
+      <p class="text-lg max-w-3xl">
+        Our goal is to make renting stress-free. From convenient online booking
+        to verified listings and personalized support, PrimeStay ensures a
+        seamless experience for all tenants. We cater to students,
+        professionals, and families looking for comfort and style at competitive
+        prices.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-5">
+        <h2 class="text-3xl font-bold text-blue-700 mb-8 text-center">
+          Our Services & Features
+        </h2>
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+          <div>
+            <h3 class="font-bold text-xl mb-2">Verified Listings</h3>
+            <p class="text-gray-600">
+              All apartments are verified to ensure authenticity and quality.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-2">Prime Locations</h3>
+            <p class="text-gray-600">
+              Apartments in city centers, business districts, and scenic areas.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-2">Flexible Rentals</h3>
+            <p class="text-gray-600">
+              Short-term and long-term rental options to suit your lifestyle.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-2">24/7 Customer Support</h3>
+            <p class="text-gray-600">
+              Our team is always available to assist with your rental needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Apartments -->
+    <section class="max-w-7xl mx-auto py-10 px-5">
+      <h2 class="text-3xl font-bold text-blue-700 mb-6">Featured Listings</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <a
+          href="catalog.html"
+          class="rounded overflow-hidden bg-white shadow hover:scale-[1.02] transition block"
+        >
+          <img
+            src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+            alt="Modern Studio Apartment"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">Modern Studio Apartment</h3>
+            <p class="text-sm text-gray-600">City Center · $950/month</p>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a
+          href="catalog.html"
+          class="rounded bg-white overflow-hidden shadow hover:scale-[1.02] transition block"
+        >
+          <img
+            src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg"
+            alt="Luxury Loft with Balcony"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">Luxury Loft with Balcony</h3>
+            <p class="text-sm text-gray-600">
+              Financial District · $1500/month
+            </p>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a
+          href="catalog.html"
+          class="rounded bg-white overflow-hidden shadow hover:scale-[1.02] transition block"
+        >
+          <img
+            src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"
+            alt="2-Bedroom Family Suite"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-2">2-Bedroom Family Suite</h3>
+            <p class="text-sm text-gray-600">River Park · $1800/month</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-blue-700 text-white py-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to find your next home?</h2>
+      <a
+        href="catalog.html"
+        class="px-6 py-3 bg-white text-blue-700 font-semibold rounded shadow hover:bg-gray-100 transition"
+      >
+        Browse All Apartments
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-blue-900 text-white py-8 mt-10">
+      <div class="max-w-7xl mx-auto px-5 text-center">
+        <p>© 2025 PrimeStay Apartments · All Rights Reserved</p>
+        <p class="mt-2">Contact us: info@primestay.com | +1 234 567 890</p>
+      </div>
+    </footer>
+  </body>
+</html>

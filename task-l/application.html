@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeStay — Rental Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- HEADER -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+        <h1 class="text-2xl font-bold text-blue-700">PrimeStay</h1>
+        <nav class="space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="catalog.html" class="hover:text-blue-600">Apartments</a>
+          <a href="application.html" class="hover:text-blue-600">Apply</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative h-[100vh] pt-32">
+      <img
+        src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg"
+        alt="Modern apartment building"
+        class="absolute inset-0 w-full h-full object-cover object-top brightness-75"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div class="relative max-w-4xl mx-auto px-5 py-20 text-center text-white">
+        <h2 class="text-5xl font-extrabold mb-4">
+          Submit Your Rental Application
+        </h2>
+        <p class="text-lg max-w-2xl mx-auto">
+          Complete the application form and our team will review your request
+          promptly.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN FORM -->
+    <main class="max-w-4xl mx-auto px-5 pb-24">
+      <form
+        id="applicationForm"
+        class="bg-white shadow-xl rounded-xl p-10 space-y-6 border border-gray-200"
+      >
+        <!-- CUSTOMER INFO -->
+        <fieldset class="space-y-4">
+          <legend class="text-2xl font-bold text-blue-700 mb-2">
+            Your Information
+          </legend>
+          <div>
+            <label for="fullname" class="block font-semibold mb-1"
+              >Full Name</label
+            >
+            <input
+              id="fullname"
+              name="fullname"
+              type="text"
+              required
+              class="w-full border rounded-lg px-4 py-3"
+            />
+          </div>
+          <div>
+            <label for="email" class="block font-semibold mb-1"
+              >Email Address</label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              class="w-full border rounded-lg px-4 py-3"
+            />
+          </div>
+          <div>
+            <label for="phone" class="block font-semibold mb-1"
+              >Phone Number</label
+            >
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              class="w-full border rounded-lg px-4 py-3"
+            />
+          </div>
+        </fieldset>
+
+        <hr class="border-gray-300" />
+
+        <!-- RENTAL DETAILS -->
+        <fieldset class="space-y-4">
+          <legend class="text-2xl font-bold text-blue-700 mb-2">
+            Application Details
+          </legend>
+          <div>
+            <label for="apartment" class="block font-semibold mb-1"
+              >Select Apartment</label
+            >
+            <select
+              id="apartment"
+              name="apartment"
+              required
+              class="w-full border rounded-lg px-4 py-3"
+            >
+              <option value="">Choose an apartment…</option>
+              <option>2-Floor Apartment — City Center — $1800/month</option>
+              <option>3-Room Family Suite — River Park — $2200/month</option>
+              <option>
+                Luxury Apartment — Financial District — $2000/month
+              </option>
+              <option>
+                Apartment with Balcony — City Center — $1300/month
+              </option>
+              <option>
+                High Standard 3-Bedroom — River Park — $2300/month
+              </option>
+              <option>Modern House — Financial District — $1900/month</option>
+              <option>
+                Near Market Studio — Financial District — $1100/month
+              </option>
+              <option>Near Park 1-Bedroom — River Park — $1400/month</option>
+              <option>Student Apartment — City Center — $950/month</option>
+              <option>Single Room Apartment — River Park — $2100/month</option>
+            </select>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="movein" class="block font-semibold mb-1"
+                >Move-in Date</label
+              >
+              <input
+                id="movein"
+                name="movein"
+                type="date"
+                required
+                class="w-full border rounded-lg px-4 py-3"
+              />
+            </div>
+            <div>
+              <label for="moveout" class="block font-semibold mb-1"
+                >Move-out Date</label
+              >
+              <input
+                id="moveout"
+                name="moveout"
+                type="date"
+                class="w-full border rounded-lg px-4 py-3"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="notes" class="block font-semibold mb-1"
+              >Additional Notes</label
+            >
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              class="w-full border rounded-lg px-4 py-3"
+              placeholder="Any special requests?"
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <hr class="border-gray-300" />
+
+        <!-- CONSENT -->
+        <div class="flex items-start space-x-3">
+          <input
+            id="terms"
+            name="terms"
+            type="checkbox"
+            required
+            class="mt-1"
+          />
+          <label for="terms" class="text-sm text-gray-600"
+            >I agree to the rental terms and privacy policy.</label
+          >
+        </div>
+
+        <!-- SUBMIT -->
+        <button
+          id="submitBtn"
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow-lg flex items-center justify-center"
+        >
+          <span id="btnText">Submit Application</span>
+          <svg
+            id="spinner"
+            class="hidden animate-spin ml-3 h-5 w-5 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v8z"
+            ></path>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Confirmation Message -->
+      <div id="confirmation" class="hidden text-center py-16">
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">
+          Your application has been submitted
+        </h2>
+        <p class="text-lg text-gray-600 mb-6">
+          Please wait while your application is being reviewed. Our team will
+          contact you shortly.
+        </p>
+        <a
+          href="catalog.html"
+          class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
+          >Browse More Apartments</a
+        >
+      </div>
+    </main>
+
+    <!-- JS for Progress + Confirmation -->
+    <script>
+      const form = document.getElementById("applicationForm");
+      const confirmation = document.getElementById("confirmation");
+      const submitBtn = document.getElementById("submitBtn");
+      const btnText = document.getElementById("btnText");
+      const spinner = document.getElementById("spinner");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // Show loading state
+        btnText.textContent = "Submitting...";
+        spinner.classList.remove("hidden");
+
+        setTimeout(() => {
+          // Hide form and show confirmation
+          form.classList.add("hidden");
+          confirmation.classList.remove("hidden");
+        }, 2000); // simulate processing delay
+      });
+    </script>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-blue-900 text-white py-8 mt-10">
+      <div class="max-w-7xl mx-auto px-5 text-center">
+        <p>© 2025 PrimeStay Apartments · All Rights Reserved</p>
+        <p class="mt-2">Contact us: info@primestay.com | +1 234 567 890</p>
+      </div>
+    </footer>
+  </body>
+</html>

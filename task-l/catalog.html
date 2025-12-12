@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catalog — PrimeStay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-5">
+        <h1 class="text-2xl font-bold text-blue-700">PrimeStay</h1>
+        <nav class="space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="catalog.html" class="hover:text-blue-600">Apartments</a>
+          <a href="application.html" class="hover:text-blue-600">Apply</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-28 max-w-7xl mx-auto px-5">
+      <h2 class="text-3xl font-bold text-blue-700 mb-6">
+        Available Apartments
+      </h2>
+
+      <!-- Filters -->
+      <div class="bg-white shadow p-6 rounded mb-8 grid md:grid-cols-3 gap-6">
+        <div>
+          <label class="block font-semibold mb-1">Max Price</label>
+          <select id="filterPrice" class="w-full border rounded p-2">
+            <option value="all">Any</option>
+            <option value="1000">Under $1000</option>
+            <option value="1500">Under $1500</option>
+            <option value="2000">Under $2000</option>
+            <option value="2500">Under $2500</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Location</label>
+          <select id="filterLocation" class="w-full border rounded p-2">
+            <option value="all">Any</option>
+            <option value="city">City Center</option>
+            <option value="finance">Financial District</option>
+            <option value="river">River Park</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Size</label>
+          <select id="filterSize" class="w-full border rounded p-2">
+            <option value="all">Any</option>
+            <option value="studio">Studio</option>
+            <option value="1bed">1 Bedroom</option>
+            <option value="2bed">2 Bedroom+</option>
+            <option value="3bed">3 Bedroom+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Apartment Grid -->
+      <div id="aptList" class="grid md:grid-cols-3 gap-6">
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt1"
+          data-price="1800"
+          data-location="city"
+          data-size="2bed"
+        >
+          <img
+            src="image/2-floor.jpeg"
+            alt="2-Floor Apartment"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">2-Floor Apartment</h4>
+            <p>City Center · $1800/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt2"
+          data-price="2200"
+          data-location="river"
+          data-size="3bed"
+        >
+          <img
+            src="image/3-room.jpg"
+            alt="3-Room Family Suite"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">3-Room Family Suite</h4>
+            <p>River Park · $2200/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt3"
+          data-price="2000"
+          data-location="finance"
+          data-size="2bed"
+        >
+          <img
+            src="image/apartment_luxo_2.jpg"
+            alt="Luxury Apartment"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">Luxury Apartment</h4>
+            <p>Financial District · $2000/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt4"
+          data-price="1300"
+          data-location="city"
+          data-size="1bed"
+        >
+          <img
+            src="image/apartment-with-balcony.jpg"
+            alt="Apartment with Balcony"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">Apartment with Balcony</h4>
+            <p>City Center · $1300/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt5"
+          data-price="2300"
+          data-location="river"
+          data-size="3bed"
+        >
+          <img
+            src="image/high-standard-3-bedroom.jpg"
+            alt="High Standard 3-Bedroom"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">High Standard 3-Bedroom</h4>
+            <p>River Park · $2300/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt6"
+          data-price="1900"
+          data-location="finance"
+          data-size="2bed"
+        >
+          <img
+            src="image/House.jpeg"
+            alt="Modern House"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">Modern House</h4>
+            <p>Financial District · $1900/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt7"
+          data-price="1100"
+          data-location="finance"
+          data-size="studio"
+        >
+          <img
+            src="image/Near-market.jpeg"
+            alt="Near Market Studio"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">Near Market Studio</h4>
+            <p>Financial District · $1100/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt8"
+          data-price="1400"
+          data-location="river"
+          data-size="1bed"
+        >
+          <img
+            src="image/Near-park.jpeg"
+            alt="Near Park 1-Bedroom"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">Near Park 1-Bedroom</h4>
+            <p>River Park · $1400/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt9"
+          data-price="950"
+          data-location="city"
+          data-size="studio"
+        >
+          <img
+            src="image/Student-apartment.jpg"
+            alt="Student Apartment"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">Student Apartment</h4>
+            <p>City Center · $950/month</p>
+          </div>
+        </a>
+        <a
+          href="#"
+          class="aptCard"
+          data-id="apt10"
+          data-price="2100"
+          data-location="river"
+          data-size="2bed"
+        >
+          <img
+            src="image/single-room.jpeg"
+            alt="Single Room Apartment"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-5">
+            <h4 class="font-bold">Single Room Apartment</h4>
+            <p>River Park · $2100/month</p>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- Apartment Modals -->
+    <div id="aptDetailsContainer"></div>
+
+    <script>
+      const apartments = [
+        {
+          id: "apt1",
+          name: "2-Floor Apartment",
+          img: "image/2-floor.jpeg",
+          desc: "Spacious 2-floor apartment in City Center with modern kitchen, balcony, and private entrance.",
+          price: "$1800/month",
+          size: "2 Bedrooms",
+        },
+        {
+          id: "apt2",
+          name: "3-Room Family Suite",
+          img: "image/3-room.jpg",
+          desc: "Comfortable 3-room suite near River Park, ideal for families with kids and pets.",
+          price: "$2200/month",
+          size: "3 Bedrooms",
+        },
+        {
+          id: "apt3",
+          name: "Luxury Apartment",
+          img: "image/apartment_luxo_2.jpg",
+          desc: "High-end 2-bedroom apartment in Financial District with premium finishes and skyline views.",
+          price: "$2000/month",
+          size: "2 Bedrooms",
+        },
+        {
+          id: "apt4",
+          name: "Apartment with Balcony",
+          img: "image/apartment-with-balcony.jpg",
+          desc: "Bright 1-bedroom apartment in City Center with a private balcony and smart lighting.",
+          price: "$1300/month",
+          size: "1 Bedroom",
+        },
+        {
+          id: "apt5",
+          name: "High Standard 3-Bedroom",
+          img: "image/high-standard-3-bedroom.jpg",
+          desc: "Elegant 3-bedroom apartment near River Park with spacious layout and luxury amenities.",
+          price: "$2300/month",
+          size: "3 Bedrooms",
+        },
+        {
+          id: "apt6",
+          name: "Modern House",
+          img: "image/House.jpeg",
+          desc: "Detached 2-bedroom house in Financial District with garden, garage, and open-plan living.",
+          price: "$1900/month",
+          size: "2 Bedrooms",
+        },
+        {
+          id: "apt7",
+          name: "Near Market Studio",
+          img: "image/Near-market.jpeg",
+          desc: "Compact studio apartment near local market, ideal for solo renters or students.",
+          price: "$1100/month",
+          size: "Studio",
+        },
+        {
+          id: "apt8",
+          name: "Near Park 1-Bedroom",
+          img: "image/Near-park.jpeg",
+          desc: "Peaceful 1-bedroom apartment near River Park with green views and walking trails.",
+          price: "$1400/month",
+          size: "1 Bedroom",
+        },
+        {
+          id: "apt9",
+          name: "Student Apartment",
+          img: "image/Student-apartment.jpg",
+          desc: "Affordable studio in City Center designed for students, with shared amenities and study space.",
+          price: "$950/month",
+          size: "Studio",
+        },
+        {
+          id: "apt10",
+          name: "Single Room Apartment",
+          img: "image/single-room.jpeg",
+          desc: "Modern single-room apartment near River Park, perfect for professionals seeking a quiet retreat.",
+          price: "$2100/month",
+          size: "2 Bedrooms",
+        },
+      ];
+
+      const container = document.getElementById("aptDetailsContainer");
+      apartments.forEach((apt) => {
+        const div = document.createElement("div");
+        div.id = apt.id;
+        div.className =
+          "aptDetail hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50 opacity-0 transition-opacity duration-300";
+        div.innerHTML = `
+          <div class="bg-white max-w-3xl w-full rounded shadow-lg p-8 relative overflow-y-auto max-h-[90vh]">
+            <button onclick="closeDetail('${apt.id}')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">✕</button>
+            <h2 class="text-2xl font-bold mb-4">${apt.name}</h2>
+            <img src="${apt.img}" alt="${apt.name}" class="w-full h-64 object-cover rounded mb-4"/>
+            <p>${apt.desc}</p>
+            <p class="mt-3"><strong>Price:</strong> ${apt.price}</p>
+            <p><strong>Size:</strong> ${apt.size}</p>
+            <div class="flex justify-between mt-6">
+              <button onclick="prevModal('${apt.id}')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Prev</button>
+              <button onclick="nextModal('${apt.id}')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Next</button>
+            </div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+
+      const priceFilter = document.getElementById("filterPrice");
+      const locationFilter = document.getElementById("filterLocation");
+      const sizeFilter = document.getElementById("filterSize");
+      const cards = document.querySelectorAll(".aptCard");
+      const modalOrder = apartments.map((a) => a.id);
+
+      function applyFilters() {
+        cards.forEach((card) => {
+          let price = parseInt(card.dataset.price);
+          let location = card.dataset.location;
+          let size = card.dataset.size;
+          let pricePass =
+            priceFilter.value === "all" || price <= parseInt(priceFilter.value);
+          let locationPass =
+            locationFilter.value === "all" || locationFilter.value === location;
+          let sizePass =
+            sizeFilter.value === "all" || sizeFilter.value === size;
+          if (pricePass && locationPass && sizePass)
+            card.classList.remove("hidden");
+          else card.classList.add("hidden");
+        });
+      }
+
+      [priceFilter, locationFilter, sizeFilter].forEach((f) =>
+        f.addEventListener("change", applyFilters)
+      );
+
+      cards.forEach((card) => {
+        card.addEventListener("click", (e) => {
+          e.preventDefault();
+          const modal = document.getElementById(card.dataset.id);
+          modal.classList.remove("hidden");
+          setTimeout(() => modal.classList.add("opacity-100"), 10);
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      function closeDetail(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove("opacity-100");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }, 300);
+      }
+
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("aptDetail")) closeDetail(e.target.id);
+      });
+
+      function nextModal(currentId) {
+        let index = modalOrder.indexOf(currentId);
+        closeDetail(currentId);
+        let nextId = modalOrder[(index + 1) % modalOrder.length];
+        const nextModalEl = document.getElementById(nextId);
+        nextModalEl.classList.remove("hidden");
+        setTimeout(() => nextModalEl.classList.add("opacity-100"), 10);
+        document.body.style.overflow = "hidden";
+      }
+
+      function prevModal(currentId) {
+        let index = modalOrder.indexOf(currentId);
+        closeDetail(currentId);
+        let prevId =
+          modalOrder[(index - 1 + modalOrder.length) % modalOrder.length];
+        const prevModalEl = document.getElementById(prevId);
+        prevModalEl.classList.remove("hidden");
+        setTimeout(() => prevModalEl.classList.add("opacity-100"), 10);
+        document.body.style.overflow = "hidden";
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-blue-900 text-white py-8 mt-10">
+      <div class="max-w-7xl mx-auto px-5 text-center">
+        <p>© 2025 PrimeStay Apartments · All Rights Reserved</p>
+        <p class="mt-2">Contact us: info@primestay.com | +1 234 567 890</p>
+      </div>
+    </footer>
+  </body>
+</html>
