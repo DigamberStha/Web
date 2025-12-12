@@ -53,7 +53,7 @@ This folder contains the final, polished three‑page website for **PrimeStay Ap
 
 ### How to View
 
-[View on GitHub Pages](https://digambersha.github.io/Web/l/index.html)
+[View on GitHub Pages](https://digambersha.github.io/Web/task-l/index.html)
 
 ---
 
